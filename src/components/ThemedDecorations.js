@@ -15,4 +15,4 @@ class ThemedDecorations extends Component {
   }
 }
 
-export default ThemedDecoration;
+export default ThemedDecorations;
