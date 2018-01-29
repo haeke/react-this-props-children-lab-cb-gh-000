@@ -1,7 +1,7 @@
 // Code ThemedDecoration Component Here
 import React, {Component} from 'react';
 
-class ThemedDecoration extends Component {
+class ThemedDecorations extends Component {
   render() {
     const childtheme = 'heaven';
     const themeItems = React.Children.map(this.props.children, child => {
