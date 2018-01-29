@@ -10,6 +10,7 @@ class ThemedDecoration extends Component {
       });
     });
     return (
+        {this.props.children}
         {themeItems}
       );
   }
