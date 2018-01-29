@@ -5,9 +5,7 @@ class ThemedDecorations extends Component {
   render() {
     const childtheme = 'heaven';
     const themeItems = React.Children.map(this.props.children, child => {
-      return React.cloneElement(child, {
-        className: childtheme,
-      });
+      return <div className={this.props.child}
     });
     return (
         {themeItems}
