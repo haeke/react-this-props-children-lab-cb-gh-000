@@ -1,17 +1,16 @@
-// Code ThemedDecoration Component Here
-import React, {Component} from 'react';
+import React from 'react';
 
-class ThemedDecorations extends Component {
+export default class ThemedDecorations extends React.Component {
   render() {
-    const themeItems = React.Children.map(this.props.children, child => {
+    const childrenWithclassName = React.Children.map(this.props.children, child => {
       return (
-        <div className={this.props.theme}>{child}</div>
-        );
-    });
-    return (
-        {themeItems}
+        <div className={this.props.theme}>{child}</div> 
       );
+    });
+    return(
+      <div>
+        {childrenWithclassName}
+        </div>
+    );
   }
 }
-
-export default ThemedDecorations;
