@@ -1,18 +1,20 @@
-// Code ThemedDecoration Component Here
-import React, {Component} from 'react';
+import React from 'react';
 
-class ThemedDecoration extends Component {
-  render() {
-    const theme = 'party';
-    const themeItems = React.Children.map(this.props.children, child => {
-      return React.cloneElement(child, {
-        className: theme,
-      });
-    });
-    return (
-        {themeItems}
-      );
-  }
-}
+export default class ThemedDecorations extends React.Component{
+  render(){
 
-export default ThemedDecoration;
+    const childTheme = 'heaven';
+
+    const extraProp = React.Children.map(
+      this.props.children, child => {
+        return React.cloneElement(child, {
+          className: childTheme
+        })
+      }
+    )
+    return(
+      <div className="wrapper">
+        {extraProp}
+      </div>
+    );
+ 
