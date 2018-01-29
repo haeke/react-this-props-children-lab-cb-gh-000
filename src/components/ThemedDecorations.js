@@ -9,7 +9,7 @@ export default class ThemedDecorations extends React.Component {
       this.props.children, child => {
         return React.cloneElement(child, {
           className: childTheme
-        })
+        });
       }
     )
     return(
